@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import Details from './Details';
 import SearchParams from './SearchParams';
+import './style.css';
 
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -17,9 +18,9 @@ const App = () => {
     return (
         <BrowserRouter>
             <QueryClientProvider client={queryClient}>
-                <heder>
+                <header>
                     <Link to='/'>Adopt me</Link>
-                </heder>
+                </header>
                 <Routes>
                     <Route path='/details/:id' element={<Details />} />
                     <Route path='/' element={<SearchParams />} />
