@@ -41,10 +41,7 @@ const SearchParams = () => {
                 </label>
                 <label htmlFor='animal'>
                     Animal
-                    <select
-                        id='animal'
-                        value={animal}
-                        onChange={(e) => setAnimal(e.target.value)}>
+                    <select id='animal' value={animal} onChange={(e) => setAnimal(e.target.value)}>
                         <option />
                         {ANIMALS.map((animal) => (
                             <option key={animal}>{animal}</option>
