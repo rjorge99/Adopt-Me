@@ -16,17 +16,19 @@ const queryClient = new QueryClient({
 
 const App = () => {
     return (
-        <BrowserRouter>
-            <QueryClientProvider client={queryClient}>
-                <header>
-                    <Link to='/'>Adopt me</Link>
-                </header>
-                <Routes>
-                    <Route path='/details/:id' element={<Details />} />
-                    <Route path='/' element={<SearchParams />} />
-                </Routes>
-            </QueryClientProvider>
-        </BrowserRouter>
+        <div className='p-0 m-0'>
+            <BrowserRouter>
+                <QueryClientProvider client={queryClient}>
+                    <header className='mb-10 w-full bg-gradient-to-b from-yellow-400 via-orange-500 to-red-500 p-7 text-center'>
+                        <Link to='/'>Adopt me</Link>
+                    </header>
+                    <Routes>
+                        <Route path='/details/:id' element={<Details />} />
+                        <Route path='/' element={<SearchParams />} />
+                    </Routes>
+                </QueryClientProvider>
+            </BrowserRouter>
+        </div>
     );
 };
 
